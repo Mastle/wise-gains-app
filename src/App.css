@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 p{
   font-size: 1.5rem;
   text-align: center;
