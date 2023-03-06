@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   const [isMenuHidden, setIsMenuHidden] = useState(true)
+  const menuStyleClass = 'absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'
+  const menuResponsiveClass = 'block hamburger md:hidden focus:outline-none'
 
   useEffect(() => {
     setIsMenuHidden(!isMenuOpen)
@@ -16,7 +17,7 @@ const Navbar = () => {
         <div className="pt-2">
           <img src={logo} alt="Logo" />
         </div>
-        <div className="hidden space-x-12 md:flex pr-10">
+        <div className="hidden text-lg space-x-12 md:flex pr-10">
           <a href="#" className="hover:text-darkGrayishblue">Pricing</a>
           <a href="#" className="hover:text-darkGrayishblue">Plans</a>
           <a href="#" className="hover:text-darkGrayishblue">Supplements</a>
@@ -24,10 +25,10 @@ const Navbar = () => {
         </div>
         <a
           href="#"
-          className="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
+          className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
           >Get Started</a>
 
-        <button id="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)} className={isMenuOpen ? 'block hamburger md:hidden focus:outline-none open' : 'block hamburger md:hidden focus:outline-none'}>
+        <button id="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)} className={isMenuOpen ? menuResponsiveClass + ' open' : menuResponsiveClass}>
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
           <span className="hamburger-bottom"></span>
@@ -35,7 +36,7 @@ const Navbar = () => {
       </div>
 
       <div className="md:hidden">
-        <div className={isMenuHidden ? 'hidden' : 'absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'} >
+        <div className={isMenuHidden ? 'hidden' : menuStyleClass } >
           <a href="#">Pricing</a>
           <a href="#">Product</a>
           <a href="#">About Us</a>

@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 *{
-  font-family: Source Serif Pro  ,Arial, Helvetica, sans-serif
+  font-family: Source Serif Pro  ,Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .hamburger {
   cursor: pointer;
@@ -10,6 +13,13 @@
   height: 24px;
   transition: all 0.25s;
   position: relative;
+}
+
+body{
+  background-image: url('./assets/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 90% 150%;
 }
 
 .hamburger-top,
