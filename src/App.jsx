@@ -1,5 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Features from './components/Features'
+import Testimonials from './components/Testimonials'
+import CalltoAction from './components/CalltoAction'
+import Footer from './components/Footer'
 import './App.css'
 
 const App = () => {
@@ -9,6 +13,10 @@ const App = () => {
     <>
       <Navbar/>
       <Hero/>
+      <Features/>
+      <Testimonials/> 
+      <CalltoAction/>
+      <Footer/>
     </>
   )
 }
@@ -18,8 +26,11 @@ export default App
 /*
 
 TODO:
-  1- Follow Brad's tailwind tut website as a template
-  2- Add a "Testimonials" section
-  3- Can I have a multiple line code as the value of an XML element? 
+   - Time to plan the new funcitionalities
+
+  
+Phase two:
+   - Add Typescript
+
 
 */

@@ -10,10 +10,10 @@ const Hero = () => {
           <h1
             className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
           >
-            Begin your athletic journey with a triend-and-true method
+            Begin your athletic journey with a tried-and-true method
           </h1>
           <p className="max-w-sm text-center text-darkGrayishBlue md:text-left">
-            Manage makes it simple for you to your work out routine
+            Wise Gains makes it simple for you to your work out routine
             while keeping up to date with the latest scientific
           </p>
           <div className="flex justify-center md:justify-start">
