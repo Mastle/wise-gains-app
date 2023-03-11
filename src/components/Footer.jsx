@@ -1,4 +1,4 @@
-import {iconFacebook, iconTwitter, iconYoutube, iconInstagram, iconPinterest} from '../assets/footer-icons'
+import { iconFacebook, iconTwitter, iconYoutube, iconInstagram, iconPinterest } from '../assets/footer-icons'
 import logoWhite from '../assets/logo-white.svg'
 
 const Footer = () => {

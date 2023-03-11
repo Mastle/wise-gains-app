@@ -1,5 +1,7 @@
 import logo from '../assets/logo.svg'
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,10 +26,8 @@ const Navbar = () => {
           <a href="#" className="hover:text-darkGrayishblue">About</a>
         </div>
         <a
-          href="#"
           className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
-          >Get Started</a>
-
+          ><Link to='/training-regimen'>Get started</Link></a>
         <button id="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)} className={isMenuOpen ? menuResponsiveClass + ' open' : menuResponsiveClass}>
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
