@@ -24,8 +24,9 @@ const App = () => {
        </>
       }>
       
-      </Route>
-      <Route path='/training-regimen' element={<TrainingRegimen/>}  />
+     </Route>
+      <Route path='/training-regimen' element={
+      <TrainingRegimen/>}  />
      </Routes>
      <Footer/>
     </>
