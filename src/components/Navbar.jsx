@@ -10,7 +10,7 @@ const Navbar = () => {
   const menuResponsiveClass = 'block hamburger md:hidden focus:outline-none'
 
   useEffect(() => {
-    setIsMenuHidden(!isMenuOpen)
+    setIsMenuHidden(!isMenuOpen)   //There should be a better way to do this
   }, [isMenuOpen])
 
   return (
