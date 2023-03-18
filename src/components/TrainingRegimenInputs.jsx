@@ -1,9 +1,9 @@
 import { useState } from "react"
 
-const TrainingRegimen = () => {
+const TrainingRegimenInputs = ({isSubmitted}) => {
   const [weight, setWeight] = useState('') 
   const [height, setHeight] = useState('')
-  const [age, setAge] = useState('')    
+  const [age, setAge] = useState('')
   const [experienceLevel, setExperienceLevel] = useState('Intermediate')
        
        const onTrainingOptionChange = e => {
@@ -11,12 +11,27 @@ const TrainingRegimen = () => {
        }
 
 
-       //Handle the states, Add them to the JSON server. Fetch random training regimen from the JSON server
+       //Fetch a beginner training routine from the server
+       //load a new component on the UI on submit
+       const onSubmit = (e) => {
+        e.preventDefault()
+    
+        // if (!text) {
+        //   alert('Please add a task')
+        //   return
+        // }
+        
+        isSubmitted(true)
+        // console.log('hello')
+        
+      }
+    
+
   return (
      <>
     <div className="text-center text-2xl text-darkBlue md:text-4xl py-5">Enter your information to get a proper training regimen</div>
     <div className="container mx-auto p-5 flex flex-col justify-center items-center text-2xl md:text-3xl ">
-      <form>
+      <form onSubmit={onSubmit}>
         <div className="my-20 text-center">
           <label
             htmlFor="weight-input"
@@ -111,14 +126,5 @@ const TrainingRegimen = () => {
   )
 }
 
-export default TrainingRegimen
+export default TrainingRegimenInputs
 
-/*
- TO DO:
-
- - need to add a "go back" button
- - Return a random work out regimen once the inputs are handled
- - Make the regimen as dynamic as you want
- - Add a JSON server backend
-
-*/

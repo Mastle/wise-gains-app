@@ -10,7 +10,7 @@ const Navbar = () => {
   const menuResponsiveClass = 'block hamburger md:hidden focus:outline-none'
 
   useEffect(() => {
-    setIsMenuHidden(!isMenuOpen)   //There should be a better way to do this
+    setIsMenuHidden(!isMenuOpen)   //There should be a better way to do this (useMemo?)
   }, [isMenuOpen])
 
   return (
@@ -25,9 +25,7 @@ const Navbar = () => {
           <a href="#" className="hover:text-darkGrayishblue">Supplements</a>
           <a href="#" className="hover:text-darkGrayishblue">About</a>
         </div>
-        <a
-          className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
-          ><Link to='/training-regimen'>Get started</Link></a>
+        <Link className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block" to='/training-regimen'>Get started</Link>
         <button id="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)} className={isMenuOpen ? menuResponsiveClass + ' open' : menuResponsiveClass}>
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
