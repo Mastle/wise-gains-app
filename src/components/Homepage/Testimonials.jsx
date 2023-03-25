@@ -1,4 +1,4 @@
-import { avatarPicOne, avatarPicTwo, avatarPicThree } from '../assets/avatars'
+import { avatarPicOne, avatarPicTwo, avatarPicThree } from '../../assets/avatars'
 
 const Testimonials = () => {
   return (

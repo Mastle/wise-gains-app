@@ -1,23 +1,28 @@
-import logo from '../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import logo from '../../assets/logo.svg'
+import { Link, useLocation} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 
-const Navbar = () => {
+const Navbar = ({isSubmitted}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuHidden, setIsMenuHidden] = useState(true)
   const menuStyleClass = 'absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'
   const menuResponsiveClass = 'block hamburger md:hidden focus:outline-none'
+  const location = useLocation()
 
   useEffect(() => {
-    setIsMenuHidden(!isMenuOpen)   //There should be a better way to do this (useMemo?)
+    setIsMenuHidden(!isMenuOpen)   
   }, [isMenuOpen])
+
+
 
   return (
      <nav className="relative container mx-auto p-6">
       <div className="flex items-center justify-between">
         <div className="pt-2">
+          <Link to='/'>
           <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <div className="hidden text-lg space-x-12 md:flex pr-10">
           <a href="#" className="hover:text-darkGrayishblue">Pricing</a>
@@ -41,8 +46,10 @@ const Navbar = () => {
           <a href="#">Careers</a>
           <a href="#">Community</a>
         </div>
-      </div>
+      </div>    
+     {location.pathname != '/training-regimen' && (isSubmitted(false))}    {/* Revision needed */}
      </nav>
+     
 
   )
 }

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const TrainingRegimenInputs = ({isSubmitted}) => {
+const TRinputs = ({isSubmitted}) => {
   const [weight, setWeight] = useState('') 
   const [height, setHeight] = useState('')
   const [age, setAge] = useState('')
@@ -11,8 +11,7 @@ const TrainingRegimenInputs = ({isSubmitted}) => {
        }
 
 
-       //Fetch a beginner training routine from the server
-       //load a new component on the UI on submit
+
        const onSubmit = (e) => {
         e.preventDefault()
     
@@ -22,10 +21,9 @@ const TrainingRegimenInputs = ({isSubmitted}) => {
         // }
         
         isSubmitted(true)
-        // console.log('hello')
-        
+      
       }
-    
+
 
   return (
      <>
@@ -126,5 +124,5 @@ const TrainingRegimenInputs = ({isSubmitted}) => {
   )
 }
 
-export default TrainingRegimenInputs
+export default TRinputs
 

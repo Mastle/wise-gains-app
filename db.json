@@ -29,8 +29,22 @@
   },
   "routines": [
     {
-      "id": 1,
+      "id": 51,
       "title": "Beginner Routine",
+      "squats": "3 sets of 8-10 reps",
+      "bench press": "3 sets of 8-10 reps",
+      "rows": "3 sets of 8-10 reps"
+    },
+     {
+      "id": 23,
+      "title": "Pro Routine",
+      "squats": "3 sets of 8-10 reps",
+      "bench press": "3 sets of 8-10 reps",
+      "rows": "3 sets of 8-10 reps"
+     } , 
+     {
+      "id": 34,
+      "title": "two-time champion Routine",
       "squats": "3 sets of 8-10 reps",
       "bench press": "3 sets of 8-10 reps",
       "rows": "3 sets of 8-10 reps"
