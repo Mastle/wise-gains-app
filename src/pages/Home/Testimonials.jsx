@@ -14,7 +14,7 @@ const Testimonials = () => {
             <img src={avatarPicOne} className="w-16 -mt-14" alt="" />
             <h5 className="text-lg font-bold">Anisha Li</h5>
             <p className="text-sm text-darkGrayishBlue">
-              “Manage has supercharged our team’s workflow. The ability to
+              “Manage has supercharged our team&apos;s workflow. The ability to
               maintain visibility on larger milestones at all times keeps
               everyone motivated.”
             </p>

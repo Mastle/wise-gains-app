@@ -1,9 +1,8 @@
-import logo from '../../assets/logo.svg'
-import { Link, useLocation} from 'react-router-dom'
+import logo from '../assets/logo.svg'
+import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-
-const Navbar = ({isSubmitted}) => {
+const Navbar = ({ isSubmitted }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuHidden, setIsMenuHidden] = useState(true)
   const menuStyleClass = 'absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'
@@ -11,10 +10,8 @@ const Navbar = ({isSubmitted}) => {
   const location = useLocation()
 
   useEffect(() => {
-    setIsMenuHidden(!isMenuOpen)   
+    setIsMenuHidden(!isMenuOpen)
   }, [isMenuOpen])
-
-
 
   return (
      <nav className="relative container mx-auto p-6">
@@ -46,11 +43,12 @@ const Navbar = ({isSubmitted}) => {
           <a href="#">Careers</a>
           <a href="#">Community</a>
         </div>
-      </div>    
-     {location.pathname != '/training-regimen' && (isSubmitted(false))}    {/* Revision needed */}
+      </div>
+     {location.pathname !== '/training-regimen' && (isSubmitted(false))}
      </nav>
-     
 
   )
 }
 export default Navbar
+
+// TODO: Will I find a react expert who'll help me with finding a better alternative to the "unmount TRdata from the path when user leaves page" than the code on line 50?

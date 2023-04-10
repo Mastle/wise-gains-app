@@ -1,11 +1,12 @@
 import { useState } from "react"
 
+
 const TRinputs = ({isSubmitted}) => {
   const [weight, setWeight] = useState('') 
   const [height, setHeight] = useState('')
   const [age, setAge] = useState('')
   const [experienceLevel, setExperienceLevel] = useState('Intermediate')
-       
+     
        const onTrainingOptionChange = e => {
         setExperienceLevel(e.target.value)
        }

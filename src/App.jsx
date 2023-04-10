@@ -1,39 +1,36 @@
-import Navbar from './components/Homepage/Navbar'
-import Hero from './components/Homepage/Hero'
-import Features from './components/Homepage/Features'
-import Testimonials from './components/Homepage/Testimonials'
-import CalltoAction from './components/Homepage/CalltoAction'
-import Footer from './components/Homepage/Footer'
-import TrainingRegimenInputs from './components/TrainingRegimen/TRinputs'
-import TrainingRegimenData from './components/TrainingRegimen/TRdata'
+import Navbar from './components/Navbar'
+import Hero from './pages/Home/Hero'
+import Features from './pages/Home/Features'
+import Testimonials from './pages/Home/Testimonials'
+import CalltoAction from './pages/Home/CalltoAction'
+import Footer from './components/Footer'
+import TrainingRegimenInputs from './pages/TrainingRegimen/TRinputs'
+import TrainingRegimenData from './pages/TrainingRegimen/TRdata'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './App.css'
 
 const App = () => {
-
-   const [isSubmitted, setIsSubmitted] = useState(false)
-
-
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   return (
     <Router>
     <>
     <Navbar isSubmitted={setIsSubmitted}/>
     <Routes>
-      <Route path='/' element={ 
+      <Route path='/' element={
         <>
          <Hero/>
          <Features/>
-         <Testimonials/> 
+         <Testimonials/>
          <CalltoAction/>
        </>
       }>
-      
+
      </Route>
       <Route path='/training-regimen' element={
-         isSubmitted ? (<TrainingRegimenData/>): (<TrainingRegimenInputs isSubmitted={setIsSubmitted}/>)
-      }  />
+         isSubmitted ? (<TrainingRegimenData isSubmitted={setIsSubmitted} />) : (<TrainingRegimenInputs isSubmitted={setIsSubmitted}/>)
+      } />
      </Routes>
      <Footer/>
     </>
@@ -42,19 +39,3 @@ const App = () => {
 }
 
 export default App
-
-/*
-   Phase one:
-    -Learn React
-    -Finish the app
-    -Deploy?
-
-  
-   Phase two:
-    - Add Typescript
-
-   Phase three:
-    - Next.js
-    - Strapi
-
-*/
