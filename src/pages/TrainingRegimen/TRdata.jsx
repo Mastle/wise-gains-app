@@ -1,22 +1,39 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from "react-router-dom";
 
 
-const TRdata = () => {
+
+const TRdata = ({setIsTrainingFormSubmitted}) => {
 
   const [newData, setNewData] = useState('')
+  let location = useLocation()
+  const [randomState, setRandomState] = useState(1)
 
   useEffect( () =>{
-   const getData = async () => {
-    const dataFromServer = await fetchData()
-    setNewData(dataFromServer)
+   
+     const getData = async () => {
+     const dataFromServer = await fetchData()
+     setNewData(dataFromServer)
+     
+
 
    }
 
    getData()
 
 
+   return () => setIsTrainingFormSubmitted(false)
+   
 
   },[])
+
+
+
+  useEffect(()=> 
+  { return () => setIsTrainingFormSubmitted(false)} , [location]) //TODO: post-production -> Is there a way to do this without disabling the strict mode? it's a problem that we can only solve once we've taken care of all the other parts of our app
+
+  
+  
 
 
 const fetchData = async () => {
@@ -32,13 +49,18 @@ const showState = () => {
 }
 
 
+const incrRandomState =  () => {
+  setRandomState(randomState => randomState += 1)
+}
+
   return (
     <div className="text-center text-lg">
       TrainingRegimenData:
-      <button onClick={showState} className="border-4">Click me</button>
+      <button onClick={incrRandomState} className="border-4">Click me</button>
     </div>
     
   )
 }
 
 export default TRdata
+

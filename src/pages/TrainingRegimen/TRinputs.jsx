@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
-const TRinputs = ({isSubmitted}) => {
+const TRinputs = ({isTrainingFormSubmitted}) => {
   const [weight, setWeight] = useState('') 
   const [height, setHeight] = useState('')
   const [age, setAge] = useState('')
@@ -15,13 +15,7 @@ const TRinputs = ({isSubmitted}) => {
 
        const onSubmit = (e) => {
         e.preventDefault()
-    
-        // if (!text) {
-        //   alert('Please add a task')
-        //   return
-        // }
-        
-        isSubmitted(true)
+        isTrainingFormSubmitted(true)
       
       }
 
