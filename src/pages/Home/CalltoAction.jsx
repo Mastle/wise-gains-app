@@ -1,5 +1,5 @@
 
-const CalltoAction = () => {
+const CallToAction = () => {
   return (
     <section id="cta" className="bg-brightRed">
       <div
@@ -21,4 +21,4 @@ const CalltoAction = () => {
   )
 }
 
-export default CalltoAction
+export default CallToAction

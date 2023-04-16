@@ -1,7 +1,6 @@
-//TODO: Finish training regimen components
 import TrainingRegimenInputs from './TRinputs'
 import TrainingRegimenData from './TRdata'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 
 const TRmain = () => {
@@ -14,7 +13,18 @@ const TRmain = () => {
 
   return (
     <>
-     {isTrainingFormSubmitted ? (<TrainingRegimenData setIsTrainingFormSubmitted={setIsTrainingFormSubmitted} />)  : (<TrainingRegimenInputs isTrainingFormSubmitted={setIsTrainingFormSubmitted}/>)}
+     {isTrainingFormSubmitted ? (<TrainingRegimenData 
+     setIsTrainingFormSubmitted={setIsTrainingFormSubmitted} 
+     />)
+       : (<TrainingRegimenInputs 
+       isTrainingFormSubmitted={setIsTrainingFormSubmitted}
+       age={age}
+       setAge={setAge}
+       weight={weight}
+       setWeight={setWeight}
+       height={height}
+       setHeight={setHeight}
+       />)}
     </>
   )
 }

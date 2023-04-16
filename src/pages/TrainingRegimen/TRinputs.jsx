@@ -1,24 +1,79 @@
-import { useState, useEffect } from "react"
+import { useState } from 'react'
 
-
-const TRinputs = ({isTrainingFormSubmitted}) => {
-  const [weight, setWeight] = useState('') 
-  const [height, setHeight] = useState('')
-  const [age, setAge] = useState('')
+const TRinputs = ({ isTrainingFormSubmitted, age, setAge, height, setHeight, weight, setWeight }) => {
   const [experienceLevel, setExperienceLevel] = useState('Intermediate')
-     
-       const onTrainingOptionChange = e => {
-        setExperienceLevel(e.target.value)
-       }
+  const [errors, setErrors] = useState({ weightError:'', heightError:'', ageError:''})
+  let formIsValidted = true
 
+  const onTrainingOptionChange = e => {
+    setExperienceLevel(e.target.value)
+  }
 
+  const formValidation = () => {
+    //TODO: review the form validation functions for one final time then move on to data
+    
+    // weight input validation
+    if (!weight) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, weightError: 'Please add your weight!' }))
+      return
+    }
+    const newWeight = weight.replace(/\s/g, '')
+    if (isNaN(newWeight)) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, weightError: 'only numbers are allowed in the weight field!' }))
+    }
 
-       const onSubmit = (e) => {
-        e.preventDefault()
-        isTrainingFormSubmitted(true)
+    if (Number(newWeight) <= 30 || Number(newWeight) >= 200) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, weightError: 'weight field will not accept less than 30 or more than 200!' }))
+    }
+
+    // height input validation
+    if (!height) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, heightError: 'please add your height' }))
+      return
+    }
+    const newHeight = height.replace(/\s/g, '')
+    if (isNaN(newHeight)) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, heightError: 'only numbers are allowed in the height field' }))
+    }
+
+    if (Number(newHeight) <= 140 || Number(newHeight) >= 230) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, heightError: 'height field will not accept less than 140 or more than 230' }))
       
-      }
+    }
 
+    // age input validation
+    if (!age) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, ageError: 'please add your age' }))
+      return
+
+    }
+    const newAge = age.replace(/\s/g, '')
+    if (isNaN(newAge)) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, ageError: 'only numbers are allowed in the age field' }))
+    }
+
+    if (Number(newAge) <= 18 || Number(newAge) >= 50) {
+      formIsValidted = false
+      setErrors(errors => ({...errors, ageError: 'age field will not accept less than 18 or more than 50' }))
+    }
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    formValidation()
+
+    if (formIsValidted) {
+      isTrainingFormSubmitted(true)
+    }
+  }
 
   return (
      <>
@@ -35,6 +90,7 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
             className="border border-black focus:outline-none focus:border-brightRed focus:border-2 shadow-sm shadow-brightRed md:text-2xl text-sm p-2"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}/>
+            <span className="block mt-5 text-base text-red-700">{errors.weightError}</span>
         </div>
 
         <div className="my-20 text-center">
@@ -48,6 +104,7 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
             value={height}
             onChange={(e) => setHeight(e.target.value)}
             />
+            <span className="block mt-5 text-base text-red-700">{errors.heightError}</span>
           </div>
 
         <div className="my-20 text-center">
@@ -59,6 +116,7 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
             className="border border-black focus:outline-none focus:border-brightRed focus:border-2 shadow-sm shadow-brightRed md:text-2xl text-sm p-2"
             value={age}
             onChange={(e) => setAge(e.target.value)}/>
+            <span className="block mt-5 text-base text-red-700">{errors.ageError}</span>
           </div>
 
         <div className="my-20 text-center">
@@ -70,7 +128,7 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
               name="training-experience"
               className="mx-5"
               value="Beginner"
-              checked={experienceLevel === "Beginner"}
+              checked={experienceLevel === 'Beginner'}
               onChange={onTrainingOptionChange}
             />
           <label>
@@ -84,7 +142,7 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
               name="training-experience"
               className="mx-5"
               value="Intermediate"
-              checked={experienceLevel === "Intermediate"}
+              checked={experienceLevel === 'Intermediate'}
               onChange={onTrainingOptionChange}
             />
           <label>
@@ -98,7 +156,7 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
               name="training-experience"
               className="mx-5"
               value="Expert"
-              checked={experienceLevel === "Expert"}
+              checked={experienceLevel === 'Expert'}
               onChange={onTrainingOptionChange}
             />
           <label>
@@ -120,4 +178,3 @@ const TRinputs = ({isTrainingFormSubmitted}) => {
 }
 
 export default TRinputs
-

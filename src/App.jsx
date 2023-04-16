@@ -2,7 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './pages/Home/Hero'
 import Features from './pages/Home/Features'
 import Testimonials from './pages/Home/Testimonials'
-import CalltoAction from './pages/Home/CalltoAction'
+import CallToAction from './pages/Home/CallToAction'
 import Footer from './components/Footer'
 import TrainingRegimenMain from './pages/TrainingRegimen/TRmain'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -20,7 +20,7 @@ const App = () => {
          <Hero/>
          <Features/>
          <Testimonials/>
-         <CalltoAction/>
+         <CallToAction/>
          </>
        }/>
       <Route path='/training-regimen' element={<TrainingRegimenMain />} />

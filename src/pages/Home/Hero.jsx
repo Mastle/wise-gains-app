@@ -1,4 +1,6 @@
 import heroPics from '../../assets/hero-working-out-pics.png'
+import { Link } from 'react-router-dom'
+
 
 const Hero = () => {
   return (
@@ -17,10 +19,10 @@ const Hero = () => {
             while keeping up to date with the latest scientific
           </p>
           <div className="flex justify-center md:justify-start">
-            <a
+            <Link
               href="#"
               className="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
-              >Get Started</a>
+              to='/training-regimen'>Get Started</Link>
           </div>
         </div>
         <div className="md:w-1/2">

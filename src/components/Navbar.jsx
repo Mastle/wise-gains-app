@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
      <nav className="relative container mx-auto p-6">
       <div className="flex items-center justify-between">
-        <div className="pt-2">
+        <div className="pr-2">
           <Link to='/'>
           <img src={logo} alt="Logo" />
           </Link>
@@ -26,7 +26,8 @@ const Navbar = () => {
           <a href="#" className="hover:text-darkGrayishblue">Supplements</a>
           <a href="#" className="hover:text-darkGrayishblue">About</a>
         </div>
-        <Link className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block" to='/training-regimen'>Get started</Link>
+        <Link className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block" 
+        to='/training-regimen'>Get started</Link>
         <button id="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)} className={isMenuOpen ? menuResponsiveClass + ' open' : menuResponsiveClass}>
           <span className="hamburger-top"></span>
           <span className="hamburger-middle"></span>
