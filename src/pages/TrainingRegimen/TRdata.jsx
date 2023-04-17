@@ -1,8 +1,9 @@
+//TODO: begin working on this component
 import { useState, useEffect } from 'react'
 
 
 
-const TRdata = ({setIsTrainingFormSubmitted}) => {
+const TRdata = ({setIsTrainingFormSubmitted, weight, height, age}) => {
 
   // const [newData, setNewData] = useState('')
 
@@ -44,7 +45,10 @@ const TRdata = ({setIsTrainingFormSubmitted}) => {
 
   return (
     <div className="text-center text-lg">
-      TrainingRegimenData:
+     Your stats:
+     <span>Weight: {weight}</span>
+     <span>height: {height}</span>
+     <span>age: {age}</span>
     </div>
     
   )

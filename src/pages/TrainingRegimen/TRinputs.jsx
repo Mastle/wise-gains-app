@@ -1,77 +1,77 @@
 import { useState } from 'react'
 
-const TRinputs = ({ isTrainingFormSubmitted, age, setAge, height, setHeight, weight, setWeight }) => {
+const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, weight, setWeight }) => {
   const [experienceLevel, setExperienceLevel] = useState('Intermediate')
-  const [errors, setErrors] = useState({ weightError:'', heightError:'', ageError:''})
+  const [errors, setErrors] = useState({ weightError: '', heightError: '', ageError: '' })
   let formIsValidted = true
 
   const onTrainingOptionChange = e => {
     setExperienceLevel(e.target.value)
   }
 
-  const formValidation = () => {
-    //TODO: review the form validation functions for one final time then move on to data
-    
-    // weight input validation
+  // weight input validation
+  const weightValidation = (weight) => {
+    const newWeight = weight.replace(/\s/g, '')
     if (!weight) {
       formIsValidted = false
-      setErrors(errors => ({...errors, weightError: 'Please add your weight!' }))
-      return
-    }
-    const newWeight = weight.replace(/\s/g, '')
-    if (isNaN(newWeight)) {
+      setErrors(errors => ({ ...errors, weightError: 'Please add your weight!' }))
+    } else if (isNaN(weight)) {
       formIsValidted = false
-      setErrors(errors => ({...errors, weightError: 'only numbers are allowed in the weight field!' }))
+      setErrors(errors => ({ ...errors, weightError: 'only numbers are allowed in the weight field!' }))
+    } else if (Number(weight) <= 30 || Number(newWeight) >= 200) {
+      formIsValidted = false
+      setErrors(errors => ({ ...errors, weightError: 'weight field will not accept less than 30 or more than 200!' }))
+    } else {
+      setErrors(errors => ({ ...errors, weightError: '' }))
     }
+  }
 
-    if (Number(newWeight) <= 30 || Number(newWeight) >= 200) {
-      formIsValidted = false
-      setErrors(errors => ({...errors, weightError: 'weight field will not accept less than 30 or more than 200!' }))
-    }
-
-    // height input validation
-    if (!height) {
-      formIsValidted = false
-      setErrors(errors => ({...errors, heightError: 'please add your height' }))
-      return
-    }
+  // height input validation
+  const heightValidation = (height) => {
     const newHeight = height.replace(/\s/g, '')
-    if (isNaN(newHeight)) {
+    if (!newHeight) {
       formIsValidted = false
-      setErrors(errors => ({...errors, heightError: 'only numbers are allowed in the height field' }))
-    }
-
-    if (Number(newHeight) <= 140 || Number(newHeight) >= 230) {
+      setErrors(errors => ({ ...errors, heightError: 'please add your height' }))
+    } else if (isNaN(newHeight)) {
       formIsValidted = false
-      setErrors(errors => ({...errors, heightError: 'height field will not accept less than 140 or more than 230' }))
-      
-    }
-
-    // age input validation
-    if (!age) {
+      setErrors(errors => ({ ...errors, heightError: 'only numbers are allowed in the height field' }))
+    } else if (Number(newHeight) <= 140 || Number(newHeight) >= 230) {
       formIsValidted = false
-      setErrors(errors => ({...errors, ageError: 'please add your age' }))
-      return
-
+      setErrors(errors => ({ ...errors, heightError: 'height field will not accept less than 140 or more than 230' }))
+    } else {
+      setErrors(errors => ({ ...errors, heightError: '' }))
     }
+  }
+
+  // age input validation
+  const ageValidation = (age) => {
     const newAge = age.replace(/\s/g, '')
-    if (isNaN(newAge)) {
+    if (!newAge) {
       formIsValidted = false
-      setErrors(errors => ({...errors, ageError: 'only numbers are allowed in the age field' }))
+      setErrors(errors => ({ ...errors, ageError: 'please add your age' }))
+    } else if (isNaN(newAge)) {
+      formIsValidted = false
+      setErrors(errors => ({ ...errors, ageError: 'only numbers are allowed in the age field' }))
+    } else if (Number(newAge) <= 18 || Number(newAge) >= 50) {
+      formIsValidted = false
+      setErrors(errors => ({ ...errors, ageError: 'age field will not accept less than 18 or more than 50' }))
+    } else {
+      setErrors(errors => ({ ...errors, ageError: '' }))
     }
+  }
 
-    if (Number(newAge) <= 18 || Number(newAge) >= 50) {
-      formIsValidted = false
-      setErrors(errors => ({...errors, ageError: 'age field will not accept less than 18 or more than 50' }))
-    }
+  const formValidation = (weight, height, age) => {
+    weightValidation(weight)
+    heightValidation(height)
+    ageValidation(age)
   }
 
   const onSubmit = (e) => {
     e.preventDefault()
-    formValidation()
+    formValidation(weight, height, age)
 
     if (formIsValidted) {
-      isTrainingFormSubmitted(true)
+      setIsTrainingFormSubmitted(true)
     }
   }
 

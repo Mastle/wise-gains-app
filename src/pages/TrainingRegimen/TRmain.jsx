@@ -15,9 +15,12 @@ const TRmain = () => {
     <>
      {isTrainingFormSubmitted ? (<TrainingRegimenData 
      setIsTrainingFormSubmitted={setIsTrainingFormSubmitted} 
+     weight={weight}
+     height={height}
+     age={age}
      />)
        : (<TrainingRegimenInputs 
-       isTrainingFormSubmitted={setIsTrainingFormSubmitted}
+       setIsTrainingFormSubmitted={setIsTrainingFormSubmitted}
        age={age}
        setAge={setAge}
        weight={weight}
