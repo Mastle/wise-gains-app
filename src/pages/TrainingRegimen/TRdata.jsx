@@ -1,4 +1,4 @@
-//TODO: begin working on this component
+//TODO-2: begin working on this component
 import { useState, useEffect } from 'react'
 
 
@@ -23,7 +23,7 @@ const TRdata = ({setIsTrainingFormSubmitted, weight, height, age}) => {
 
 
   useEffect(()=> 
-  { return () => setIsTrainingFormSubmitted(false)} ,[])  //TODO: this could still be fixed. Had to remove strict mode because of this
+  { return () => setIsTrainingFormSubmitted(false)} ,[])  //TODO-post-production: This has to be fixed. Had to remove strict mode because of this. But first I have to fully finish the app
 
   
   
