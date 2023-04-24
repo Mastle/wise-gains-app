@@ -7,11 +7,9 @@ const Navbar = () => {
   const menuStyleClass = 'absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md'
   const menuResponsiveClass = 'block hamburger md:hidden focus:outline-none'
 
-
- const handleMenuClick = () =>{
-  setIsMenuOpen(!isMenuOpen)
-
-} 
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
      <nav className="relative container mx-auto p-6">
@@ -27,7 +25,7 @@ const Navbar = () => {
           <a href="#" className="hover:text-darkGrayishblue">Supplements</a>
           <a href="#" className="hover:text-darkGrayishblue">About</a>
         </div>
-        <Link className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block" 
+        <Link className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
         to='/training-regimen'>Get started</Link>
         <button id="menu-btn" onClick={handleMenuClick} className={isMenuOpen ? menuResponsiveClass + ' open' : menuResponsiveClass}>
           <span className="hamburger-top"></span>
@@ -37,7 +35,7 @@ const Navbar = () => {
       </div>
 
       <div className="md:hidden">
-        <div className={isMenuOpen ?  menuStyleClass: 'hidden' } >
+        <div className={isMenuOpen ? menuStyleClass : 'hidden' } >
           <a href="#">Pricing</a>
           <a href="#">Product</a>
           <a href="#">About Us</a>
@@ -50,4 +48,3 @@ const Navbar = () => {
   )
 }
 export default Navbar
-

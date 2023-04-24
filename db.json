@@ -1,53 +1,26 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    { 
-      "id": 2, 
-      "title": "My server", 
-      "author": "Amirali" 
-    },
-    { 
-      "id": 3, 
-      "title": "new server", 
-      "author": "Amirali" 
-    }
-    
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
+
   "routines": [
     {
-      "id": 51,
-      "title": "Beginner Routine",
-      "squats": "3 sets of 8-10 reps",
-      "bench press": "3 sets of 8-10 reps",
-      "rows": "3 sets of 8-10 reps"
+      "id": 1,
+      "title": "Beginner",
+      "exercise_1": "Squats: 3 sets of 8-10 reps",
+      "exercise_2": "Bench Press: 3 sets of 8-10 reps",
+      "exercise_3": "dumbbell rows: 3 sets of 8-10 reps"
     },
      {
-      "id": 23,
-      "title": "Pro Routine",
-      "squats": "3 sets of 8-10 reps",
-      "bench press": "3 sets of 8-10 reps",
-      "rows": "3 sets of 8-10 reps"
+      "id": 2,
+      "title": "Intermediate",
+      "exercise_1": "Squats: 3 sets of 8-10 reps",
+      "exercise_2": "Bench Press: 3 sets of 8-10 reps",
+      "exercise_3": "dumbbell rows: 3 sets of 8-10 reps"
      } , 
      {
-      "id": 34,
-      "title": "two-time champion Routine",
-      "squats": "3 sets of 8-10 reps",
-      "bench press": "3 sets of 8-10 reps",
-      "rows": "3 sets of 8-10 reps"
+      "id": 3,
+      "title": "Expert",
+      "exercise_1": "Squats: 3 sets of 8-10 reps",
+      "exercise_2": "Bench Press: 3 sets of 8-10 reps",
+      "exercise_3": "dumbbell rows: 3 sets of 8-10 reps"
     }
   ]
 

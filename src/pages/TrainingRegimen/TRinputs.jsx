@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, weight, setWeight }) => {
-  const [experienceLevel, setExperienceLevel] = useState('Intermediate')
+const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, weight, setWeight, experienceLevel, setExperienceLevel }) => {
   const [errors, setErrors] = useState({ weightError: '', heightError: '', ageError: '' })
   let formIsValidted = true
 
@@ -18,7 +17,7 @@ const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, 
     } else if (isNaN(weight)) {
       formIsValidted = false
       setErrors(errors => ({ ...errors, weightError: 'only numbers are allowed in the weight field!' }))
-    } else if (Number(weight) <= 30 || Number(newWeight) >= 200) {
+    } else if (Number(weight) < 30 || Number(newWeight) > 200) {
       formIsValidted = false
       setErrors(errors => ({ ...errors, weightError: 'weight field will not accept less than 30 or more than 200!' }))
     } else {
@@ -35,7 +34,7 @@ const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, 
     } else if (isNaN(newHeight)) {
       formIsValidted = false
       setErrors(errors => ({ ...errors, heightError: 'only numbers are allowed in the height field' }))
-    } else if (Number(newHeight) <= 140 || Number(newHeight) >= 230) {
+    } else if (Number(newHeight) < 140 || Number(newHeight) > 230) {
       formIsValidted = false
       setErrors(errors => ({ ...errors, heightError: 'height field will not accept less than 140 or more than 230' }))
     } else {
@@ -52,7 +51,7 @@ const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, 
     } else if (isNaN(newAge)) {
       formIsValidted = false
       setErrors(errors => ({ ...errors, ageError: 'only numbers are allowed in the age field' }))
-    } else if (Number(newAge) <= 18 || Number(newAge) >= 50) {
+    } else if (Number(newAge) < 18 || Number(newAge) > 50) {
       formIsValidted = false
       setErrors(errors => ({ ...errors, ageError: 'age field will not accept less than 18 or more than 50' }))
     } else {
