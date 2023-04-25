@@ -33,7 +33,7 @@ const TRdata = ({ weight, height, age, experienceLevel }) => {
      </div>
      <div className="mt-3 pb-5">
            {/* TODO: I will fix the styling once I've taken care of the logic of the TRexercise component */}
-       <h1 className="text-2xl"> Your regimen: </h1>
+       <h1 className="text-2xl"> Your regimen:  </h1>
        <div className='md:relative md:right-4 flex flex-col space-y-5 justify-between mt-10 md:max-w-sm md:mx-auto'>
         <TrainingRegimenExercises exercises={newData}/>
        </div>

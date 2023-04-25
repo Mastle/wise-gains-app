@@ -1,0 +1,27 @@
+{
+
+    "routines": [
+      {
+        "id": 1,
+        "title": "Beginner",
+        "exercise_1": "Squats: 3 sets of 8-10 reps",
+        "exercise_2": "Bench Press: 3 sets of 8-10 reps",
+        "exercise_3": "dumbbell rows: 3 sets of 8-10 reps"
+      },
+       {
+        "id": 2,
+        "title": "Intermediate",
+        "exercise_1": "Squats: 3 sets of 8-10 reps",
+        "exercise_2": "Bench Press: 3 sets of 8-10 reps",
+        "exercise_3": "dumbbell rows: 3 sets of 8-10 reps"
+       } , 
+       {
+        "id": 3,
+        "title": "Expert",
+        "exercise_1": "Squats: 3 sets of 8-10 reps",
+        "exercise_2": "Bench Press: 3 sets of 8-10 reps",
+        "exercise_3": "dumbbell rows: 3 sets of 8-10 reps"
+      }
+    ]
+  
+  }
