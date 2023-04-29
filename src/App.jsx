@@ -1,3 +1,4 @@
+//TODO: prepare the project for Behbod's review
 import Navbar from './components/Navbar'
 import Hero from './pages/Home/Hero'
 import Features from './pages/Home/Features'
