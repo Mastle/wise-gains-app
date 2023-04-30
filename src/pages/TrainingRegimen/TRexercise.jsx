@@ -1,38 +1,51 @@
-// TODO: Designing the exercise cards, Creating Add, remove and edit functionalities
-
-import { useEffect } from 'react'
+// TODO: Designing the exercise cards
 import { FaTimes, FaPencilAlt } from 'react-icons/fa'
 
 const TRexercise = ({ exercise }) => {
- //I want to separate each exercise, extract the title and the instruction, and in the end, put them in the presentation area
- //It looks like I need an array that holds each exercise individually
-const myArr = []
-let j = 0
+  const myArr = []
+  let j = 0; let exerciseStringIndex = 0
+  let exerciseTitle = ''; let exerciseInstruction = ''
 
+  for (const i in exercise) {
+    myArr[j++] = exercise[i]
+  }
 
-for (const i in exercise){
-  myArr[j++] = exercise[i]
- }
- 
-myArr.map( e => console.log(e))
- //current step: finally fucking got the array of strings that holds each exercise separately, time to parse them properly
-
+  const returnExercises = () => {
+    return (
+      myArr.map((element, index) => {
+        if (typeof (element) === 'string') {
+          if (element.includes(':')) {
+            exerciseStringIndex = element.indexOf(':')
+            exerciseTitle = element.slice(0, exerciseStringIndex)
+            exerciseInstruction = element.slice(exerciseStringIndex + 1, element.length)
+          }
+        }
+        return (
+    <div key={index}>
+      <h1> {exerciseTitle}</h1>
+      <p> {exerciseInstruction}</p>
+    </div>
+        )
+      })
+    )
+  }
 
   return (
     <>
-
-        <h1>{exercise.title} Routine</h1>
+         {returnExercises()}
+         {/* current step: delete the elements below and style the elements above */}
+       <h1> {exercise.title} Routine</h1>
         <div className="md:min-w-full md:px-20 justify-between flex flex-row">
           <div className="">
-              <p>{exercise.exercise_1}  {/* Must use Javascript string manipulation to separate the title from the instruction, 
-              will use h1 for the title of the card */}
+              <p>{exercise.exercise_1}
               </p>
-              <FaTimes style={{color: 'red', cursor: 'pointer'}}/> 
+              <FaTimes style={{ color: 'red', cursor: 'pointer' }}/>
               <FaPencilAlt className='ml-20'/>
             </div>
           <div className=""><p>{exercise.exercise_2 } <FaTimes/> <FaPencilAlt/></p></div>
           <div className=""><p>{exercise.exercise_3} <FaTimes/> <FaPencilAlt/></p></div>
         </div>
+
     </>
   )
 }
