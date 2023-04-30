@@ -1,9 +1,23 @@
 // TODO: Designing the exercise cards, Creating Add, remove and edit functionalities
 
-
+import { useEffect } from 'react'
 import { FaTimes, FaPencilAlt } from 'react-icons/fa'
 
 const TRexercise = ({ exercise }) => {
+ //I want to separate each exercise, extract the title and the instruction, and in the end, put them in the presentation area
+ //It looks like I need an array that holds each exercise individually
+const myArr = []
+let j = 0
+
+
+for (const i in exercise){
+  myArr[j++] = exercise[i]
+ }
+ 
+myArr.map( e => console.log(e))
+ //current step: finally fucking got the array of strings that holds each exercise separately, time to parse them properly
+
+
   return (
     <>
 

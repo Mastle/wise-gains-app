@@ -111,7 +111,7 @@ const TRinputs = ({ setIsTrainingFormSubmitted, age, setAge, height, setHeight, 
             htmlFor="weight-input"
             className="block mb-8 md:text-3xl text-xl">Age</label>
           <input
-            type="text"
+            type="number"
             className="border border-black focus:outline-none focus:border-brightRed focus:border-2 shadow-sm shadow-brightRed md:text-2xl text-sm p-2"
             value={age}
             onChange={(e) => setAge(e.target.value)}/>
