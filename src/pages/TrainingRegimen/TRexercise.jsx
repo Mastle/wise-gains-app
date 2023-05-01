@@ -1,10 +1,9 @@
-// TODO: Designing the exercise cards
-import { FaTimes, FaPencilAlt } from 'react-icons/fa'
-
 const TRexercise = ({ exercise }) => {
   const myArr = []
-  let j = 0; let exerciseStringIndex = 0
-  let exerciseTitle = ''; let exerciseInstruction = ''
+  let j = 0
+  let exerciseStringIndex = 0
+  let exerciseTitle = ''
+  let exerciseInstruction = ''
 
   for (const i in exercise) {
     myArr[j++] = exercise[i]
@@ -20,33 +19,25 @@ const TRexercise = ({ exercise }) => {
             exerciseInstruction = element.slice(exerciseStringIndex + 1, element.length)
           }
         }
-        return (
-    <div key={index}>
-      <h1> {exerciseTitle}</h1>
-      <p> {exerciseInstruction}</p>
-    </div>
-        )
+        if (exerciseTitle) {
+          return (
+           <div key={index} className='border-4 border-darkBlue rounded-xl bg-pinkishOrange p-6 mt-6'>
+             <h1 className='font-bold'> {exerciseTitle}</h1>
+             <p className='mt-4'> {exerciseInstruction}</p>
+           </div>
+          )
+        } else { return null }
       })
     )
   }
 
   return (
-    <>
+    <div className='my-14'>
+       <h1 className='text-xl'> {exercise.title} Routine</h1>
+       <div className='flex justify-evenly px-8 mt-8'>
          {returnExercises()}
-         {/* current step: delete the elements below and style the elements above */}
-       <h1> {exercise.title} Routine</h1>
-        <div className="md:min-w-full md:px-20 justify-between flex flex-row">
-          <div className="">
-              <p>{exercise.exercise_1}
-              </p>
-              <FaTimes style={{ color: 'red', cursor: 'pointer' }}/>
-              <FaPencilAlt className='ml-20'/>
-            </div>
-          <div className=""><p>{exercise.exercise_2 } <FaTimes/> <FaPencilAlt/></p></div>
-          <div className=""><p>{exercise.exercise_3} <FaTimes/> <FaPencilAlt/></p></div>
-        </div>
-
-    </>
+       </div>
+    </div>
   )
 }
 export default TRexercise

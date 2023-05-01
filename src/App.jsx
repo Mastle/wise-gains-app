@@ -1,4 +1,5 @@
 //TODO: prepare the project for Behbod's review
+// Steps: a- Re-arrange the content of the homepage  b- Might be a good idea to create a modal c- Figure out what the next page should be like (pricing is probably next)
 import Navbar from './components/Navbar'
 import Hero from './pages/Home/Hero'
 import Features from './pages/Home/Features'

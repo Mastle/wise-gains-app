@@ -8,7 +8,7 @@ const CallToAction = () => {
         <h2
           className="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
         >
-          Simplify how your team works today
+          Enhance your athletic life
         </h2>
         <div>
           <a
