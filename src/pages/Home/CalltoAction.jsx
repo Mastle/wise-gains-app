@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 const CallToAction = () => {
   return (
@@ -11,10 +12,11 @@ const CallToAction = () => {
           Enhance your athletic life
         </h2>
         <div>
-          <a
+          <Link
             href="#"
             className="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
-            >Get Started</a>
+           to='/training-regimen'
+           >Get Started</Link>
         </div>
       </div>
     </section>

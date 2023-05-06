@@ -1,7 +1,6 @@
 import heroPics from '../../assets/hero-working-out-pics.png'
 import { Link } from 'react-router-dom'
 
-
 const Hero = () => {
   return (
     <section>
@@ -15,7 +14,7 @@ const Hero = () => {
             Begin your athletic journey with a tried-and-true method
           </h1>
           <p className="max-w-sm text-center text-darkGrayishBlue md:text-left">
-            Wise Gains makes it simple for you to your work out routine
+            Wise Gains makes it simple for you to plan your work out routine
             while keeping up to date with the latest scientific
           </p>
           <div className="flex justify-center md:justify-start">

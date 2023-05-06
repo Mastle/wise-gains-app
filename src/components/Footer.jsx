@@ -1,5 +1,6 @@
 import { iconFacebook, iconTwitter, iconYoutube, iconInstagram, iconPinterest } from '../assets/footer-icons'
 import logoWhite from '../assets/logo-white.svg'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -14,7 +15,9 @@ const Footer = () => {
             Copyright &copy; 2022, All Rights Reserved
           </div>
           <div>
-            <img src={logoWhite} className="h-8" alt="" />
+            <Link to='/'>
+             <img src={logoWhite} className="h-8" alt="" />
+            </Link>
           </div>
           <div className="flex justify-center space-x-4">
             <a href="#">
