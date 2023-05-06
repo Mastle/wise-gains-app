@@ -1,6 +1,6 @@
 import TrainingRegimenExercise from './TRexercise.jsx'
 
-const TRexercise = ({ exercises }) => {
+const TRexercises = ({ exercises }) => {
   return (
     <>
        {exercises.map((exercise, index) => (<TrainingRegimenExercise key={index} exercise={exercise}
@@ -8,4 +8,4 @@ const TRexercise = ({ exercises }) => {
     </>
   )
 }
-export default TRexercise
+export default TRexercises

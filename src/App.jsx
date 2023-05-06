@@ -1,12 +1,9 @@
 // TODO: prepare the project for Behbod's review
-// Steps: b- Start working on the pricing page (add a modal)
-import Navbar from './components/Navbar'
-import Hero from './pages/Home/Hero'
-import Features from './pages/Home/Features'
-import Testimonials from './pages/Home/Testimonials'
-import CallToAction from './pages/Home/CallToAction'
-import Footer from './components/Footer'
+// Steps: b- Start working on the results page (add a modal)
+
+import { Navbar, Hero, Features, Testimonials, CallToAction, Footer } from './pages/Home/HomeIndex'
 import TrainingRegimenMain from './pages/TrainingRegimen/TRmain'
+import ResultsMain from './pages/Results/ResultsMain'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 
@@ -25,6 +22,7 @@ const App = () => {
          </>
        }/>
       <Route path='/training-regimen' element={<TrainingRegimenMain />} />
+      <Route path='/results' element={<ResultsMain />} />
       </Routes>
       <Footer/>
     </>

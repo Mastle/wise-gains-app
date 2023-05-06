@@ -20,7 +20,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden text-lg space-x-12 md:flex pr-10">
-          <a href="#" className="hover:text-darkGrayishblue">Pricing</a>
+          <Link to="/results" className="hover:text-darkGrayishblue">Results</Link>
           <a href="#" className="hover:text-darkGrayishblue">Plans</a>
           <a href="#" className="hover:text-darkGrayishblue">Supplements</a>
           <a href="#" className="hover:text-darkGrayishblue">About</a>

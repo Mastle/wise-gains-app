@@ -9,6 +9,7 @@ const TRexercise = ({ exercise }) => {
     myArr[j++] = exercise[i]
   }
 
+
   const returnExercises = () => {
     return (
       myArr.map((element, index) => {
