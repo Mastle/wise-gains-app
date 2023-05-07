@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
 }
+
 .hamburger {
   cursor: pointer;
   width: 24px;
@@ -89,3 +90,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.result-header{
+  text-shadow: 0 0 13px black;
+}
+

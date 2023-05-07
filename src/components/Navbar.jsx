@@ -36,11 +36,10 @@ const Navbar = () => {
 
       <div className="md:hidden">
         <div className={isMenuOpen ? menuStyleClass : 'hidden' } >
-          <a href="#">Pricing</a>
-          <a href="#">Product</a>
+          <Link to="/results">Results</Link>
+          <a href="#">Plans</a>
+          <a href="#">Supplements</a>
           <a href="#">About Us</a>
-          <a href="#">Careers</a>
-          <a href="#">Community</a>
         </div>
       </div>
      </nav>
