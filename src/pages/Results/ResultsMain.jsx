@@ -1,8 +1,7 @@
-// TODO: currently working on this page - need to make the header (result) responsive -
+// TODO: currently working on this page
 /* Steps:
-a- create the static page first
 b- Need a result component to render each result after receiving them from the database
-c- Use the figma mockup
+
 */
 
 import { personOne, personTwo } from '../../assets/results-img/index'
@@ -11,8 +10,8 @@ const ResultsMain = () => {
   return (
     <div>
       <div>
-        <h1 className="result-header md:relative md:left-[30rem] text-white text-center md:text-9xl
-        text-5xl mt-20 border-8 max-w-4xl border-darkBlue p-10 rounded-xl mx-10"> Results </h1>
+        <h1 className="result-header md:relative md:left-[30rem] text-white text-center md:text-8xl
+        text-5xl mt-20 border-8 max-w-4xl border-darkBlue p-10 rounded-xl mx-10"> THE RESULTS </h1>
       </div>
       <div>
         <div className='md:w-[1000px] mx-auto mt-20 border-t-4 border-darkBlue pt-4 md:mb-40'> {/* Each one is a result component */}
