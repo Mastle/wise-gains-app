@@ -22,8 +22,8 @@ const Navbar = () => {
         <div className="hidden text-lg space-x-12 md:flex pr-10">
           <Link to="/results" className="hover:text-darkGrayishblue">Results</Link>
           <Link to="/plans" className="hover:text-darkGrayishblue">Plans</Link>
-          <a href="#" className="hover:text-darkGrayishblue">Supplements</a>
-          <a href="#" className="hover:text-darkGrayishblue">About</a>
+          <Link to="/supplements" className="hover:text-darkGrayishblue">Supplements</Link>
+          <Link to="/about" className="hover:text-darkGrayishblue">About</Link>
         </div>
         <Link className="hidden text-lg whitespace-nowrap p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
         to='/training-regimen'>Get started</Link>
@@ -37,9 +37,9 @@ const Navbar = () => {
       <div className="md:hidden">
         <div className={isMenuOpen ? menuStyleClass : 'hidden' } >
           <Link to="/results">Results</Link>
-          <a href="#">Plans</a>
-          <a href="#">Supplements</a>
-          <a href="#">About Us</a>
+          <Link to="/plans" className="hover:text-darkGrayishblue">Plans</Link>
+          <Link to="/supplements" className="hover:text-darkGrayishblue">Supplements</Link>
+          <Link to="/about" className="hover:text-darkGrayishblue">About</Link>
         </div>
       </div>
      </nav>

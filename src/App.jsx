@@ -5,6 +5,8 @@ import { Navbar, Hero, Features, Testimonials, CallToAction, Footer } from './pa
 import TrainingRegimenMain from './pages/TrainingRegimen/TRmain'
 import ResultsMain from './pages/Results/ResultsMain'
 import PlansMain from './pages/Plans/PlansMain'
+import SupplementsMain from './pages/Supplements/SupplementsMain'
+import AboutMain from './pages/About/AboutMain'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css'
 
@@ -25,6 +27,8 @@ const App = () => {
       <Route path='/training-regimen' element={<TrainingRegimenMain />} />
       <Route path='/results' element={<ResultsMain />} />
       <Route path='/plans' element={<PlansMain />} />
+      <Route path='/supplements' element={<SupplementsMain />} />
+      <Route path='/about' element={<AboutMain />} />
       </Routes>
       <Footer/>
     </>
