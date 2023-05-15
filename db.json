@@ -11,16 +11,16 @@
      {
       "id": 2,
       "title": "Intermediate",
-      "exercise_1": "Squats: 3 sets of 8-10 reps",
-      "exercise_2": "Bench Press: 3 sets of 8-10 reps",
-      "exercise_3": "Dumbbell Rows: 3 sets of 8-10 reps"
+      "exercise_1": "Leg curls: 3 sets of 8-10 reps",
+      "exercise_2": "Leg Press: 3 sets of 8-10 reps",
+      "exercise_3": "Dumbbell: 3 sets of 8-10 reps"
      } , 
      {
       "id": 3,
       "title": "Expert",
-      "exercise_1": "Squats: 3 sets of 8-10 reps",
-      "exercise_2": "Bench Press: 3 sets of 8-10 reps",
-      "exercise_3": "Dumbbell Rows: 3 sets of 8-10 reps"
+      "exercise_1": "Seated Squats: 3 sets of 8-10 reps",
+      "exercise_2": "T-Bar: 3 sets of 8-10 reps",
+      "exercise_3": "lateral dumbbell raises: 3 sets of 8-10 reps"
     }
   ]
 

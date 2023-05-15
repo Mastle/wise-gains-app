@@ -1,4 +1,4 @@
-//users can rate the supplements, there is a supplement rating system
+// users can rate the supplements, there is a supplement rating system
 import { proVegan, proRed, rxOne, rxTwo } from '../../assets/supplements-img/index'
 import { FaRegStar, FaStarHalfAlt, FaStar } from 'react-icons/fa'
 
@@ -15,11 +15,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -31,11 +31,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -47,11 +47,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -63,11 +63,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -79,11 +79,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -95,11 +95,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -111,11 +111,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
@@ -127,11 +127,11 @@ const SupplementsMain = () => {
            <h3 className='text-center pt-2 text-xl'>$59.99</h3>
            <div className='text-center'>
             <div className='inline'>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStar style={{display: 'inline'}}/>
-              <FaStarHalfAlt style={{display: 'inline'}}/>
-              <FaRegStar style={{display: 'inline'}}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStar style={{ display: 'inline' }}/>
+              <FaStarHalfAlt style={{ display: 'inline' }}/>
+              <FaRegStar style={{ display: 'inline' }}/>
             </div>
             <div className='inline'><span> (3.5)</span></div>
            </div>
