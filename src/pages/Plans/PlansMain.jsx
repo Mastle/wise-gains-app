@@ -1,3 +1,4 @@
+//TODO: main container requires better placement for mobile version
 // Each plan becomes a component of its own with a commenting system that shows user reviews
 import { bodyWeightTrainingPic, advancedWeightTrainingPic, completeAthleteTrainingPic, dumbbellTrainingProgramPic, completeAthleteTrainingTwoPic } from '../../assets/plans-pics'
 
