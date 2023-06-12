@@ -11,7 +11,7 @@ const Hero = () => {
           <h1
             className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
           >
-            Begin your athletic journey with a tried-and-true method <span style={{ backgroundColor: 'pink', display: 'block'}}>Testing continous deployment</span>
+            Begin your athletic journey with a tried-and-true method
           </h1>
           <p className="max-w-sm text-center text-darkGrayishBlue md:text-left">
             Wise Gains makes it simple for you to plan your work out routine
